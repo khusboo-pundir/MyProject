@@ -12,7 +12,7 @@ export default function Add(){
         e.preventDefault();
         try
         {
-           const response = await axios.post('http://localhost:3002/api/employees',
+           const response = await axios.post('https://backend-ivg6.onrender.com/api/employees',
             {empNo,empName,empSal});
             alert(response.data.message);
         }
