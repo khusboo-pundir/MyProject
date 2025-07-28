@@ -3,7 +3,7 @@ const express =  require('express');
 const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
-const port = 3002;
+const port = 'https://frontend-28g4.onrender.com';
 //middleware to parse Json object
 app.use(express.json());
 app.use(cors());
