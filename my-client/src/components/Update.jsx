@@ -13,7 +13,7 @@ async function updateHandler(e)
 e.preventDefault();
 try
 {
-    const response = await axios.put(`http://localhost:3002/api/employees/${id}`,
+    const response = await axios.put(`https://backend-ivg6.onrender.com/api/employees/${id}`,
     {empNo:Number(empNo),empName,empSal:Number(empSal)});
 
     alert(response.data.message);
