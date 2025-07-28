@@ -1,0 +1,113 @@
+
+/* Global box-sizing for layout control */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Background and font */
+body {
+  margin: 0;
+  padding: 0 10px;
+  font-family: 'Poppins', sans-serif;
+  background: white;
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+  max-width: 550px;
+  margin: 30px auto;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid black;
+}
+
+/* Heading */
+.main-container h2 {
+  font-size: 1.8rem;
+  color: #4b2e83;
+  margin-bottom: 10px;
+}
+
+.main-container hr {
+  border: none;
+  height: 2px;
+  background: #a78bfa;
+  margin: 20px 0;
+}
+
+/* Input fields */
+.main-container input[type="text"],
+.main-container input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #f0f4ff, #fefefe);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.main-container input[type="text"]:focus,
+.main-container input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #c084fc;
+}
+
+/* Submit button */
+.main-container input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #7c3aed, #0ea5e9);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.main-container input[type="submit"]:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #5b21b6, #0284c7);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .main-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-container input[type="text"],
+  .main-container input[type="number"],
+  .main-container input[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 12px;
+    margin: 20px 8px;
+  }
+
+  .main-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .main-container input[type="submit"] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
