@@ -3,7 +3,7 @@ const express =  require('express');
 const mongoose = require('mongoose');
 const app = express();
 const cors = require('cors');
-
+const port = 3002;
 //middleware to parse Json object
 app.use(express.json());
 app.use(cors());
@@ -121,6 +121,6 @@ app.put('/api/employees/:id', async (req, res) => {
 
 
 // Start server 
-app.listen('https://frontend-28g4.onrender.com',()=>{
+app.listen({port},()=>{
     console.log('Server running on http://localhost:3002');
 });
