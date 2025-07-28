@@ -11,7 +11,7 @@ export function Find(){
         e.preventDefault();
         try
         {
-           const response = await axios.get (`http://localhost:3002/api/employees/${id}`);
+           const response = await axios.get (`https://backend-ivg6.onrender.com/api/employees/${id}`);
            setEmployee(response.data);
 
         }
